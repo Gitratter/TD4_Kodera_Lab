@@ -10,7 +10,18 @@ This project implements a 4-bit TD4 CPU on FPGA to understand the internal archi
 - Register and ALU design
 - Clock-synchronized operation
 
+## Architecture
 
+
+## Instruction Set
+| Instruction | Des |
+|---|---|
+| MOV A,Im | ... |
+
+## Future Work
+- Pipeline architecture
+- Interrupt support
+- UART communication
 
 
 
