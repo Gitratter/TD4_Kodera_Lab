@@ -14,7 +14,7 @@ This project implements a 4-bit TD4 CPU on FPGA to understand the internal archi
 
 
 ## Instruction Set
-| Instruction | Des |
+| Instruction | Description |
 |---|---|
 | MOV A,Im | ... |
 
