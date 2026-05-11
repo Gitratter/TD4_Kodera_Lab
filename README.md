@@ -188,7 +188,7 @@ Created by Gitratter
 
 ## License
 
-This project is for educational and research purposes.
+This project is licensed under the MIT License.
 
 
 
