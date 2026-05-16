@@ -22,3 +22,8 @@ assign LEDR = td4_inst.ADDR;
 
 endmodule 
 
+/*
+module TOP(clk, reset, in, out, clksel);
+    input clk, reset, clksel;
+    input [3:0] in,
+    output reg [3:0]out = 4'b0000;
