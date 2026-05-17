@@ -24,3 +24,10 @@ set_property IOSTANDARD LVCMOS33 [get_ports OUT[*]]
 ##clksel
 set_property IOSTANDARD LVCMOS33 [get_ports clksel]
 set_property PACKAGE_PIN W15 [get_ports clksel]
+
+##clk_ind
+set_property PACKAGE_PIN P3 [get_ports {clk_ind[0]}]
+set_property PACKAGE_PIN N3 [get_ports {clk_ind[1]}]
+set_property PACKAGE_PIN P1 [get_ports {clk_ind[2]}]
+set_property PACKAGE_PIN L1 [get_ports {clk_ind[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports clk_ind[*]]
