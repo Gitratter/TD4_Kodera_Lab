@@ -2,7 +2,7 @@ module TD4_TOP(clk, reset, in, out, clksel, clk_ind);
     input clk, reset, clksel;
     input [3:0]in;
     output reg [3:0]clk_ind;
-    output reg [3:0]out = 4'b0000;
+    output reg [3:0]out;
 
     //クロック切替
     wire clk_1Hz, clk_10Hz, clkt;
@@ -13,9 +13,9 @@ module TD4_TOP(clk, reset, in, out, clksel, clk_ind);
     gen_10Hz gen10 (.clk(clk),.reset(reset), .clk_10Hz(clk_10Hz));
 
     //プログラムカウンタ・レジスタ関連
-    reg [3:0]reg_A = 4'b0000;
-    reg [3:0]reg_B = 4'b0000;  //register
-    reg [3:0]pcnt = 4'b0000;  //program count
+    reg [3:0]reg_A;
+    reg [3:0]reg_B;  //register
+    reg [3:0]pcnt;  //program count
     reg carry_flag;
     wire carry_wire;
 
