@@ -21,6 +21,7 @@ module DECODER(opcode, carry, instr);
             4'b1001 : instr = 7'b011101x;  //OUT B
             4'b1111 : instr = 7'b111110x;  //JMP Im
             4'b1110 : instr = carry ? 7'bxx1111x : 7'b111110x;  //JNC Im
+            default : instr = 7'b1111110;
             //default : {selectB,selectA,LOAD0,LOAD1,LOAD2,LOAD3,ALUsel} =7'bxxxxxxx;
         endcase
     end
