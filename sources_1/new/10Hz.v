@@ -9,7 +9,7 @@ module gen_10Hz(clk, reset, clk_10Hz);
             count <= 0;
             clk_10Hz <= 0;
         end else begin
-            count <= count + 1'bl;
+            count <= count + 1'b1;
 			if(count == 27'd5_000_000)begin
                 clk_10Hz <= ~clk_10Hz;
                 count <= 27'b0;
