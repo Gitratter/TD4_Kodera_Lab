@@ -52,6 +52,7 @@ module TD4_TOP(clk, reset, in, out, clksel, clk_ind);
             out <= 0;
             pcnt <= 0;
             carry_flag <= 0;
+            clk_ind <= 0;
         end else begin
             if(~LOAD0)reg_A <= ALU_data;
             if(~LOAD1)reg_B <= ALU_data;
