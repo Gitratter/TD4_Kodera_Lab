@@ -6,21 +6,21 @@ module DECODER(opcode, carry, instr);
 
     always@(*)begin
         case(opcode)
-            4'b0011 : instr = 7'b110111x;  //MOV A,Im
-            4'b0111 : instr = 7'b111011x;  //MOV B,Im
-            4'b0001 : instr = 7'b010111x;  //MOV A,B
-            4'b0100 : instr = 7'b001011x;  //MOV B,A
+            4'b0011 : instr = 7'b1101110;  //MOV A,Im
+            4'b0111 : instr = 7'b1110110;  //MOV B,Im
+            4'b0001 : instr = 7'b0101110;  //MOV A,B
+            4'b0100 : instr = 7'b0010110;  //MOV B,A
             4'b0000 : instr = 7'b0001110;  //ADD A,Im
             4'b0101 : instr = 7'b0110110;  //ADD B,Im
             4'b1000 : instr = 7'b0001111;  //SUB A,Im
             4'b1101 : instr = 7'b0110111;  //SUB B,Im
-            4'b0010 : instr = 7'b100111x;  //IN A
-            4'b0110 : instr = 7'b101011x;  //IN B
-            4'b1011 : instr = 7'b111101x;  //OUT Im
-            4'b1010 : instr = 7'b001101x;  //OUT A 追加
-            4'b1001 : instr = 7'b011101x;  //OUT B
-            4'b1111 : instr = 7'b111110x;  //JMP Im
-            4'b1110 : instr = carry ? 7'bxx1111x : 7'b111110x;  //JNC Im
+            4'b0010 : instr = 7'b1001110;  //IN A
+            4'b0110 : instr = 7'b1010110;  //IN B
+            4'b1011 : instr = 7'b1111010;  //OUT Im
+            4'b1010 : instr = 7'b0011010;  //OUT A 追加
+            4'b1001 : instr = 7'b0111010;  //OUT B
+            4'b1111 : instr = 7'b1111100;  //JMP Im
+            4'b1110 : instr = carry ? 7'b1111110 : 7'b1111100;  //JNC Im
             default : instr = 7'b1111110;
             //default : {selectB,selectA,LOAD0,LOAD1,LOAD2,LOAD3,ALUsel} =7'bxxxxxxx;
         endcase
