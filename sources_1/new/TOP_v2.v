@@ -3,9 +3,9 @@ module TD4_TOP(clk, reset, in, out, clksel, clk_ind, seg, an);
     input [3:0]in;
     output reg [3:0]clk_ind;
     output reg [3:0]out;
+
     output [6:0] seg;
     output [3:0] an;
-    
     assign an = 4'b1110;
     
     /*
