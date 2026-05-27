@@ -4,13 +4,14 @@ module ROM(pcnt, command);
 
 	reg [7:0]rom[0:15];
 
-	integer i;
+	//integer i;
     initial begin
 		
+		/*
 		// Default
         for(i = 0; i < 16; i = i + 1)
             rom[i] = 8'b11110000;
-
+            
         // Program
         rom[0] = 8'b00000001;  //add regA+1
         rom[1] = 8'b10100000;  //regA out
@@ -20,7 +21,26 @@ module ROM(pcnt, command);
         rom[5] = 8'b10100000;  //regA out
         rom[6] = 8'b10000010;  //sub regA-10
         rom[7] = 8'b10100000;  //regA out
+        */
+        
+        rom[0] = 8'b00100101; // IN A
+        rom[1] = 8'b11000011; // STORE A,3
+        rom[2] = 8'b00110000; // MOV A,0
+        rom[3] = 8'b11100011; // LOAD A,3
+        rom[4] = 8'b10100000; // OUT A
+        rom[5] = 8'b11110000; // JMP 0
+        
+        
 		
     end
     assign command = rom[pcnt];
 endmodule
+
+
+
+
+
+
+
+
+
